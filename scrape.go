@@ -70,7 +70,7 @@ func (s *Scrape) ProcessURL(url string) map[string]interface{} {
 func (s *Scrape) ProcessDocument(d *html.HtmlDocument) map[string]interface{} {
 	data := make(map[string]interface{})
 	for key := range s.Fields {
-		data[key] = s.Fields[key].processField(d)
+		data[key] = s.Fields[key].ProcessField(d)
 	}
 
 	return data
